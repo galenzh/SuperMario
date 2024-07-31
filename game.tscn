@@ -446,9 +446,6 @@ limit_left = 0
 limit_top = 0
 limit_bottom = 246
 
-[node name="Pipeline" parent="." instance=ExtResource("5_rjee6")]
-position = Vector2(366, 208)
-
 [node name="LeftAirWall" parent="." instance=ExtResource("5_mg7tt")]
 
 [node name="RightAirWall" parent="." instance=ExtResource("5_mg7tt")]
@@ -457,24 +454,138 @@ position = Vector2(3376, 0)
 [node name="Bricks" type="Node" parent="."]
 
 [node name="Brick" parent="Bricks" instance=ExtResource("6_lu6ld")]
-position = Vector2(151, 169)
-
-[node name="Brick2" parent="Bricks" instance=ExtResource("6_lu6ld")]
-position = Vector2(167, 169)
+position = Vector2(328, 160)
 
 [node name="Brick3" parent="Bricks" instance=ExtResource("6_lu6ld")]
-position = Vector2(183, 169)
+position = Vector2(360, 160)
 
 [node name="Brick4" parent="Bricks" instance=ExtResource("6_lu6ld")]
-position = Vector2(199, 169)
+position = Vector2(392, 160)
+
+[node name="Brick2" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1240, 160)
 
 [node name="Brick5" parent="Bricks" instance=ExtResource("6_lu6ld")]
-position = Vector2(215, 169)
+position = Vector2(1272, 160)
+
+[node name="Brick6" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1288, 96)
+
+[node name="Brick7" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1304, 96)
+
+[node name="Brick8" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1320, 96)
+
+[node name="Brick9" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1336, 96)
+
+[node name="Brick10" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1352, 96)
+
+[node name="Brick11" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1368, 96)
+
+[node name="Brick12" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1384, 96)
+
+[node name="Brick13" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1400, 96)
+
+[node name="Brick14" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1464, 96)
+
+[node name="Brick15" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1480, 96)
+
+[node name="Brick16" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1496, 96)
+
+[node name="Brick17" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1512, 160)
+
+[node name="Brick18" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1608, 160)
+
+[node name="Brick19" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1624, 160)
+
+[node name="Brick20" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1896, 160)
+
+[node name="Brick21" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1944, 96)
+
+[node name="Brick22" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1960, 96)
+
+[node name="Brick23" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(1976, 96)
+
+[node name="Brick24" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2056, 96)
+
+[node name="Brick25" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2104, 96)
+
+[node name="Brick26" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2072, 160)
+
+[node name="Brick27" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2088, 160)
+
+[node name="Brick28" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2696, 160)
+
+[node name="Brick29" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2712, 160)
+
+[node name="Brick30" parent="Bricks" instance=ExtResource("6_lu6ld")]
+position = Vector2(2744, 160)
 
 [node name="Questions" type="Node" parent="."]
 
 [node name="Question" parent="Questions" instance=ExtResource("8_oeshy")]
-position = Vector2(107, 169)
+position = Vector2(264, 161)
+
+[node name="Question2" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(344, 160)
+
+[node name="Question3" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(376, 160)
+
+[node name="Question4" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(360, 96)
+
+[node name="Question5" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1032, 144)
+
+[node name="Question6" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1256, 160)
+
+[node name="Question7" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1512, 96)
+
+[node name="Question8" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1704, 160)
+
+[node name="Question9" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1752, 160)
+
+[node name="Question10" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1800, 160)
+
+[node name="Question11" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(1752, 96)
+
+[node name="Question12" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(2072, 96)
+
+[node name="Question13" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(2088, 96)
+
+[node name="Question14" parent="Questions" instance=ExtResource("8_oeshy")]
+position = Vector2(2728, 160)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -482,7 +593,37 @@ position = Vector2(107, 169)
 position = Vector2(227, 208)
 
 [node name="Goomba2" parent="Enemies" instance=ExtResource("7_j0nxc")]
-position = Vector2(181, 132)
+position = Vector2(723, 208)
 
 [node name="Goomba3" parent="Enemies" instance=ExtResource("7_j0nxc")]
-position = Vector2(500, 208)
+position = Vector2(777, 208)
+
+[node name="Goomba4" parent="Enemies" instance=ExtResource("7_j0nxc")]
+position = Vector2(796, 208)
+
+[node name="Pipelines" type="Node" parent="."]
+
+[node name="Pipeline" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(464, 207)
+
+[node name="Pipeline2" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(624, 208)
+
+[node name="Pipeline3" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(752, 208)
+
+[node name="Pipeline4" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(928, 208)
+
+[node name="Pipeline5" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(2624, 208)
+
+[node name="Pipeline6" parent="Pipelines" instance=ExtResource("5_rjee6")]
+position = Vector2(2880, 208)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 298.0
+offset_bottom = 95.0
+text = "Using Godot 4, I spent a week completing some features of the first level of Super Mario."

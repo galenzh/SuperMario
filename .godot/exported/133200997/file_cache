@@ -1,0 +1,9 @@
+res://enemies/goomba.tscn::6e27f5cf7ab8d4aa8c9c262af719ef00::1722431429::res://.godot/exported/133200997/export-56f32dadd592cc7c9c4c6b7c7f78f2c9-goomba.scn
+res://items/air_wall.tscn::734606f1408ef5f4b8fe8275d04dfede::1719647932::res://.godot/exported/133200997/export-7105704a2aeda5895c7d47e132592d8d-air_wall.scn
+res://items/brick.tscn::0355268e49c2e4c308b41e0d2b9f8a97::1722431429::res://.godot/exported/133200997/export-1d0028ca2d86a9a0183953286b0f57e8-brick.scn
+res://items/coin_up.tscn::a2be4321913f4a08648d97ed97065334::1722431429::res://.godot/exported/133200997/export-ce4adf6dc458d20144d3f11286109b05-coin_up.scn
+res://items/mushroom-grow.tscn::92a039e66476ef0ca6579410afc9635f::1722431429::res://.godot/exported/133200997/export-38c71b2129b7bd41a60e19d8a4983385-mushroom-grow.scn
+res://items/pipeline.tscn::a281d6cf344a8ceeeb08e4dae395ec82::1722431429::res://.godot/exported/133200997/export-1d65f474010eab65f3fb765ab2dd34b6-pipeline.scn
+res://items/question.tscn::4a72b7208a98e64ed2a54e6e77b18277::1722390757::res://.godot/exported/133200997/export-c273527b0e2072945646a6de846a6224-question.scn
+res://game.tscn::4d4545e3f289bba9fb128a08f8e3efdb::1722431429::res://.godot/exported/133200997/export-609f762188a68253d349ec58c4f3a8d3-game.scn
+res://player.tscn::035fe60f2dc07f16a875de1894cf8b68::1722431429::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn

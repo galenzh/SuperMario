@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed = 50
 @export var gravity_value = 1000
 @onready var raycast_forward = $RayCast2D_Forward
-@onready var raycast_ground = $RayCast2D_Ground
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var timer = $Timer
 
