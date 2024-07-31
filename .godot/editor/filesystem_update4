@@ -1,6 +1,5 @@
 res://game.tscn
 res://player.tscn
-res://items/question.tscn
 res://items/brick.tscn
 res://items/coin_up.tscn
 res://items/mushroom-grow.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bklfnk3fv2wdm"]
+[gd_scene load_steps=10 format=3 uid="uid://bklfnk3fv2wdm"]
 
 [ext_resource type="Texture2D" uid="uid://b0e2nybvh7fip" path="res://assets/bg.png" id="1_cqwom"]
 [ext_resource type="Script" path="res://enemies/goomba.gd" id="1_kb6nm"]
@@ -40,6 +40,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vj04"]
 radius = 7.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0r0h"]
+size = Vector2(16, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82rpb"]
+size = Vector2(12, 1.5)
+
 [node name="Goomba" type="CharacterBody2D"]
 script = ExtResource("1_kb6nm")
 
@@ -50,9 +56,29 @@ animation = &"move"
 autoplay = "move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_6vj04")
 
 [node name="RayCast2D_Forward" type="RayCast2D" parent="."]
 position = Vector2(0, -8)
 target_position = Vector2(-8, 0)
+
+[node name="Area2DBody" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DBody"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_v0r0h")
+
+[node name="Area2DHead" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DHead"]
+position = Vector2(0, -15.25)
+shape = SubResource("RectangleShape2D_82rpb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="Area2DBody" to="." method="_on_area_2d_body_body_entered"]
+[connection signal="body_entered" from="Area2DHead" to="." method="_on_area_2d_head_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

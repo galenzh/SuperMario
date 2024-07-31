@@ -52,3 +52,8 @@ func _physics_process(delta):
 			animated_sprite.play(state + "_idle")
 	else:
 		animated_sprite.play(state + "_jump")
+	
+
+# 踩死敌人后轻微跳动
+func jump_small():
+	velocity.y = -140
