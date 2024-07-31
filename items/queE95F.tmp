@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://c27oyqlrc1d0m"]
+
+[ext_resource type="Texture2D" uid="uid://b0e2nybvh7fip" path="res://assets/bg.png" id="1_1sqha"]
+[ext_resource type="Script" path="res://items/question.gd" id="1_ptxr1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyyuy"]
+atlas = ExtResource("1_1sqha")
+region = Rect2(136, 68, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yvuh"]
+atlas = ExtResource("1_1sqha")
+region = Rect2(153, 68, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cm4t"]
+atlas = ExtResource("1_1sqha")
+region = Rect2(170, 68, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki6bu"]
+atlas = ExtResource("1_1sqha")
+region = Rect2(187, 68, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_le3i2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyyuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yvuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cm4t")
+}],
+"loop": true,
+"name": &"blink",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki6bu")
+}],
+"loop": true,
+"name": &"disabled",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2otp"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a337s"]
+size = Vector2(16, 1)
+
+[sub_resource type="Animation" id="Animation_r6hno"]
+resource_name = "bounce"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, -13), Vector2(0, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_aw67t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_01tce"]
+_data = {
+"RESET": SubResource("Animation_aw67t"),
+"bounce": SubResource("Animation_r6hno")
+}
+
+[node name="Question" type="Node2D"]
+script = ExtResource("1_ptxr1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_le3i2")
+animation = &"disabled"
+autoplay = "blink"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_f2otp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_a337s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_01tce")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

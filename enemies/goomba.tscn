@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bklfnk3fv2wdm"]
+
+[ext_resource type="Texture2D" uid="uid://b0e2nybvh7fip" path="res://assets/bg.png" id="1_cqwom"]
+[ext_resource type="Script" path="res://enemies/goomba.gd" id="1_kb6nm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34mh7"]
+atlas = ExtResource("1_cqwom")
+region = Rect2(170, 119, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pegk6"]
+atlas = ExtResource("1_cqwom")
+region = Rect2(136, 119, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhtrr"]
+atlas = ExtResource("1_cqwom")
+region = Rect2(153, 119, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7bud"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34mh7")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pegk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhtrr")
+}],
+"loop": true,
+"name": &"move",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vj04"]
+radius = 7.0
+
+[node name="Goomba" type="CharacterBody2D"]
+script = ExtResource("1_kb6nm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_u7bud")
+animation = &"move"
+autoplay = "move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_6vj04")
+
+[node name="RayCast2D_Forward" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(-8, 0)

@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0waya8f1li3a"]
+
+[ext_resource type="Texture2D" uid="uid://cpvuli5jqdsiw" path="res://assets/coin_up.png" id="1_qe8iq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1b1i"]
+atlas = ExtResource("1_qe8iq")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6c3r"]
+atlas = ExtResource("1_qe8iq")
+region = Rect2(10, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3qy8"]
+atlas = ExtResource("1_qe8iq")
+region = Rect2(20, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guat8"]
+atlas = ExtResource("1_qe8iq")
+region = Rect2(30, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfp3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1b1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6c3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3qy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guat8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_d0lc0"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_5hcv8"]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, -8), Vector2(0, -57), Vector2(0, -37)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7j840"]
+_data = {
+"RESET": SubResource("Animation_d0lc0"),
+"jump": SubResource("Animation_5hcv8")
+}
+
+[node name="Coin" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -37)
+sprite_frames = SubResource("SpriteFrames_jfp3h")
+autoplay = "default"
+frame_progress = 0.937055
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7j840")
+}
+autoplay = "jump"

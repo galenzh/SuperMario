@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfrixa6xw7y56"]
+
+[ext_resource type="Texture2D" uid="uid://b0e2nybvh7fip" path="res://assets/bg.png" id="1_bm6la"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r37kd"]
+radius = 8.0
+
+[node name="MashroomGrow" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_bm6la")
+region_enabled = true
+region_rect = Rect2(255, 68, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_r37kd")

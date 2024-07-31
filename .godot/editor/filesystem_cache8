@@ -1,0 +1,28 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722390333
+game.tscn::PackedScene::7364561489655427929::1722346056::0::1::::<><>::uid://bm8wibi1og630::::res://assets/NES - Super Mario Bros - World 1-1.png<>uid://b0e2nybvh7fip::::res://assets/bg.png<>uid://ditbnvopyqn0k::::res://player.tscn<>uid://4ic070dh8fr4::::res://items/air_wall.tscn<>uid://bn76k8klpxu02::::res://items/pipeline.tscn<>uid://dxv17ad0tiomo::::res://items/brick.tscn<>uid://bklfnk3fv2wdm::::res://enemies/goomba.tscn<>uid://c27oyqlrc1d0m::::res://items/question.tscn
+icon.svg::CompressedTexture2D::1001078052069083912::1719561415::1719561420::1::::<><>::
+player.gd::GDScript::-1::1719635582::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::7760081035156091120::1722346056::0::1::::<><>::uid://lbjmbis8v6dn::::res://assets/small.png<>res://player.gd<>uid://2647cwbw0am2::::res://assets/big.png
+::res://assets/::1722325968
+bg.png::CompressedTexture2D::4151063122855577859::1719638133::1719638135::1::::<><>::
+big.png::CompressedTexture2D::1960912565906126843::1719565907::1719565912::1::::<><>::
+brick_broken.png::CompressedTexture2D::5002390743089099981::1722325829::1722325968::1::::<><>::
+coin_up.png::CompressedTexture2D::5870260405341599142::1722325754::1722325968::1::::<><>::
+fire.png::CompressedTexture2D::3553531858526278869::1722325904::1722325968::1::::<><>::
+fire_explosion.png::CompressedTexture2D::5209285422769458756::1722325949::1722325968::1::::<><>::
+NES - Super Mario Bros - Mario & Luigi.png::CompressedTexture2D::6339439846544323828::1718937478::1719561455::1::::<><>::
+NES - Super Mario Bros - World 1-1.png::CompressedTexture2D::3298161399507651485::1718938162::1719566073::1::::<><>::
+small.png::CompressedTexture2D::774709605978756455::1719632972::1719632974::1::::<><>::
+::res://enemies/::1722346056
+goomba.gd::GDScript::-1::1722342703::0::1::::<>CharacterBody2D<>::
+goomba.tscn::PackedScene::3111344644397030418::1722346056::0::1::::<><>::uid://b0e2nybvh7fip::::res://assets/bg.png<>res://enemies/goomba.gd
+::res://items/::1722346056
+air_wall.tscn::PackedScene::2052159285882851723::1719647932::0::1::::<><>::
+brick.gd::GDScript::-1::1722321182::0::1::::<>Node2D<>::
+brick.tscn::PackedScene::8818593180602208302::1722346056::0::1::::<><>::res://items/brick.gd<>uid://b0e2nybvh7fip::::res://assets/bg.png
+coin_up.tscn::PackedScene::8959442362914055472::1722346056::0::1::::<><>::uid://cpvuli5jqdsiw::::res://assets/coin_up.png
+mushroom-grow.tscn::PackedScene::2772986181868861051::1722346056::0::1::::<><>::uid://b0e2nybvh7fip::::res://assets/bg.png
+pipeline.tscn::PackedScene::3366837573071605829::1722346056::0::1::::<><>::uid://b0e2nybvh7fip::::res://assets/bg.png
+question.gd::GDScript::-1::1722340495::0::1::::<>Node2D<>::
+question.tscn::PackedScene::6734893988837989306::1722346056::0::1::::<><>::uid://b0e2nybvh7fip::::res://assets/bg.png<>res://items/question.gd
