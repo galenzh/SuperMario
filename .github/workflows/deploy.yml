@@ -1,0 +1,43 @@
+name: Deploy Godot Web Project to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 或者你的主要分支名
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install http-server
+      run: npm install -g http-server
+
+    - name: Create public directory
+      run: mkdir public
+
+    - name: Copy exported project to public directory
+      run: cp -r dist/* public/  # 更新路径到你的 Godot 导出目录
+
+    - name: Add .nojekyll to bypass Jekyll processing
+      run: touch public/.nojekyll
+
+    - name: Create CORS headers
+      run: |
+        echo "/*" > public/_headers
+        echo "  Cross-Origin-Opener-Policy: same-origin" >> public/_headers
+        echo "  Cross-Origin-Embedder-Policy: require-corp" >> public/_headers
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
