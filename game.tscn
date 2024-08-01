@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc6pitbeio13j"]
+[gd_scene load_steps=11 format=3 uid="uid://dc6pitbeio13j"]
 
 [ext_resource type="Texture2D" uid="uid://bm8wibi1og630" path="res://assets/NES - Super Mario Bros - World 1-1.png" id="1_l377c"]
 [ext_resource type="Texture2D" uid="uid://b0e2nybvh7fip" path="res://assets/bg.png" id="2_djxop"]
@@ -421,17 +421,6 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_he24q")
 
-[sub_resource type="FontFile" id="FontFile_wlfmt"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-
-[sub_resource type="Theme" id="Theme_tx37j"]
-default_font = SubResource("FontFile_wlfmt")
-
 [node name="Game" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -637,7 +626,6 @@ offset_left = 12.0
 offset_top = 12.0
 offset_right = 298.0
 offset_bottom = 176.0
-theme = SubResource("Theme_tx37j")
 text = "Using Godot 4, I spent a week completing some features of the first level of Super Mario.
 A => walk left
 D => walk right
