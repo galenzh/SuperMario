@@ -1,1 +1,1 @@
-This is a Super Mario game developed using Godot 4, mainly for learning purposes. 
+This is a Super Mario game developed using Godot 4, mainly for learning purposes.
